@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>GPT Plus 升级 | 128.8 元/月 · 微信支付</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    :root{
+      --bg:#0e1713;
+      --panel:#0f2019;
+      --panel-2:#11271f;
+      --line:rgba(34,197,94,.3);
+      --text:#eafff3;
+      --sub:#b7f0cd;
+      --muted:#9de7c3;
+      --accent:#22c55e;
+      --accent2:#10b981;
+      --danger:#ef4444;
+    }
+    *{box-sizing:border-box;font-family:'Segoe UI','Microsoft YaHei',sans-serif}
+    body{margin:0;background:linear-gradient(180deg,#09110e 0%, var(--bg) 100%);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:980px;margin:0 auto;padding:20px}
+    header{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+    .brand{display:flex;gap:10px;align-items:center}
+    .brand i{color:var(--accent);font-size:22px}
+    .brand b{font-size:18px;letter-spacing:.5px;background:linear-gradient(90deg,var(--accent),#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    nav{display:flex;gap:20px;align-items:center}
+    nav a{color:#c6f6d5;font-weight:700;position:relative;padding-bottom:4px;cursor:pointer}
+    nav a:hover{color:#86efac}
+    nav a:hover::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:linear-gradient(90deg,var(--accent),#34d399)}
+
+    /* hero */
+    .hero{padding:36px 0 22px;text-align:center}
+    .kicker{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);padding:6px 12px;border-radius:999px;color:#d1fae5;background:rgba(16,39,30,.4)}
+    .hero h1{font-size:40px;margin:14px 0 8px;background:linear-gradient(90deg,#fff,#bbf7d0);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .price{font-size:48px;font-weight:900;color:#86efac;margin:6px 0}
+    .sub{color:var(--sub);font-size:16px}
+    .sub small{color:#9ae6b4}
+    .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:20px 0 8px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:12px;border:1px solid transparent;font-weight:800;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#34d399);color:#052e1a;box-shadow:0 10px 26px rgba(34,197,94,.35)}
+    .btn-ghost{background:transparent;border-color:var(--accent);color:#bbf7d0}
+    .note{margin-top:6px;color:#9de7c3;font-size:13px}
+
+    /* grid blocks */
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0}
+    .card{background:rgba(16,39,30,.6);border:1px solid var(--line);border-radius:16px;padding:16px}
+    .card h3{margin:0 0 10px;font-size:18px}
+    .card ul{list-style:none;margin:0;padding:0;color:#eafff3;line-height:1.8}
+    .tag{display:inline-block;font-size:12px;padding:3px 8px;border-radius:8px;background:rgba(16,185,129,.22);color:#a7f3d0;margin-left:8px}
+
+    /* steps */
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:8px 0 16px}
+    .step{background:rgba(16,39,30,.55);border:1px solid var(--line);border-radius:14px;padding:14px}
+    .step b{display:block;margin-bottom:6px}
+    .help{margin:10px 0 0;text-align:center}
+    .help a{color:#86efac;text-decoration:underline}
+
+    /* modal (video & contact 共用) */
+    .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.75);z-index:100;justify-content:center;align-items:center;padding:20px}
+    .modal .box{position:relative;width:92%;max-width:860px;background:#0b0f0d;border:1px solid var(--line);border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.55);overflow:hidden}
+    .modal .close{position:absolute;top:10px;right:12px;background:#ef4444;border:none;color:#fff;border-radius:8px;padding:6px 10px;font-weight:800;cursor:pointer}
+    .modal video{width:100%;height:auto;display:block;background:#000}
+
+    /* contact content */
+    .contact-wrap{padding:16px}
+    .contact-title{font-weight:900;margin:2px 0 12px 4px;color:#bbf7d0}
+    .qr-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .qr-card{background:rgba(16,39,30,.6);border:1px solid var(--line);border-radius:12px;padding:10px;text-align:center}
+    .qr-card img{width:220px;max-width:100%;border-radius:10px;display:block;margin:4px auto}
+    .qr-card span{display:block;margin-top:6px;color:#a7f3d0}
+
+    footer{margin:20px 0 10px;text-align:center;color:#a7f3d0;border-top:1px solid var(--line);padding-top:16px}
+
+    @media (max-width:680px){
+      .grid{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+      .qr-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <i class="fas fa-leaf"></i><b>GPT Plus 升级</b>
+      </div>
+      <nav>
+        <a href="#">首页</a>
+        <a id="video">视频教程</a>
+        <a href="#faq">常见问题</a>
+        <a id="contact"><i class="fas fa-headset"></i> 联系我们</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="kicker"><i class="fas fa-bolt"></i> GPT Plus 会员升级</div>
+      <h1>只需 <span class="price">128.8 元/月</span></h1>
+      <div class="sub">官网 $20/月（≈约 145 元）。当前仅支持 <b>微信支付</b>，极速升级，售后保障。<br><small>* 通过 iOS 渠道订阅升级，官方同源，价格更优惠。</small></div>
+      <div class="cta">
+        <a class="btn btn-primary" onclick="buy()"><i class="fas fa-cart-plus"></i> 先买卡密（自动发货）</a>
+        <a class="btn btn-ghost" onclick="recharge()"><i class="fas fa-rocket"></i> 进入代充系统</a>
+      </div>
+      <div class="note">温馨提示：下单后通常 5 分钟内完成升级；如拥堵，请稍后再试或联系右上角客服。</div>
+    </section>
+
+    <!-- 两列信息：官网 vs 本站 -->
+    <section class="grid">
+      <div class="card">
+        <h3>官网 OpenAI</h3>
+        <ul>
+          <li>• 价格：$20/月</li>
+          <li>• 需国际支付或 Apple Pay</li>
+          <li>• 国内用户门槛较高</li>
+        </ul>
+      </div>
+      <div class="card" style="border-color:#22c55e">
+        <h3>本站升级 <span class="tag">热销</span></h3>
+        <ul>
+          <li>• 价格：<b>128.8 元/月</b></li>
+          <li>• 仅微信支付，自动到账</li>
+          <li>• 与官网功能完全一致</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 操作流程 -->
+    <section class="card">
+      <h3>操作流程</h3>
+      <div class="steps">
+        <div class="step"><b>① 购买卡密</b>点击“先买卡密”，完成支付后自动发货。</div>
+        <div class="step"><b>② 进入代充</b>点击“进入代充系统”，输入卡密和账号信息。</div>
+        <div class="step"><b>③ 完成升级</b>通常 5 分钟内开通；若拥堵稍等或联系客服。</div>
+      </div>
+      <div class="help">
+        <a href="javascript:void(0)" id="watch"><i class="fas fa-circle-play"></i> 查看使用教程</a>
+      </div>
+    </section>
+
+    <!-- 服务保障 / FAQ -->
+    <section class="grid" id="faq">
+      <div class="card">
+        <h3>服务保障</h3>
+        <ul>
+          <li>• 正规可靠：iOS 渠道订阅，不获取密码</li>
+          <li>• 快速到账：24 小时自助，拥堵时稍后再试</li>
+          <li>• 售后无忧：异常订单支持补单与退款按天计算</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>常见问题</h3>
+        <ul>
+          <li><b>Q：</b>升级后和官网有区别吗？<br> <b>A：</b>没有区别，功能完全一致。</li>
+          <li><b>Q：</b>为什么更便宜？<br> <b>A：</b>通过 iOS 渠道订阅，整体成本更低。</li>
+          <li><b>Q：</b>支持哪些支付？<br> <b>A：</b>目前仅支持 <b>微信支付</b>。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 视频教程浮窗（点击遮罩关闭） -->
+    <div id="videoModal" class="modal" aria-hidden="true">
+      <div class="box" role="dialog" aria-label="视频教程">
+        <video id="tutorialVideo" src="视频教程.mp4" controls></video>
+        <button class="close" onclick="closeVideo()">X</button>
+      </div>
+    </div>
+
+    <!-- 联系我们居中浮窗 -->
+    <div id="contactModal" class="modal" aria-hidden="true">
+      <div class="box" role="dialog" aria-label="联系客服">
+        <button class="close" onclick="closeContact()">X</button>
+        <div class="contact-wrap">
+          <div class="contact-title"><i class="fas fa-headset"></i> 客服二维码</div>
+          <div class="qr-grid">
+            <div class="qr-card">
+              <img src="微信二维码.png" alt="微信二维码">
+              <span>微信客服</span>
+            </div>
+            <div class="qr-card">
+              <img src="QQ二维码.png" alt="QQ二维码">
+              <span>QQ客服</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:#9de7c3;margin-top:10px">* 添加时备注：Plus升级</div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 GPT Plus 升级服务 · 微信支付 · 售后保障
+    </footer>
+  </div>
+
+  <script>
+    // 购买/代充链接
+    function buy(){ window.open("https://sc.i6ls.com//details/19BD93C8","_blank"); }
+    function recharge(){ window.open("https://chongzhi.pro","_blank"); }
+
+    // ===== 视频教程（浮窗） =====
+    const videoModal = document.getElementById('videoModal');
+    const tutorialVideo = document.getElementById('tutorialVideo');
+
+    function openVideo(){
+      videoModal.style.display = 'flex';
+      videoModal.setAttribute('aria-hidden','false');
+      tutorialVideo.currentTime = 0;
+      tutorialVideo.play();
+    }
+    function closeVideo(){
+      tutorialVideo.pause();
+      videoModal.style.display = 'none';
+      videoModal.setAttribute('aria-hidden','true');
+    }
+    // 点击遮罩关闭
+    videoModal.addEventListener('click', (e)=>{
+      if(e.target === videoModal){ closeVideo(); }
+    });
+
+    document.getElementById('video').addEventListener('click', openVideo);
+    document.getElementById('watch').addEventListener('click', openVideo);
+
+    // ===== 联系我们（居中浮窗） =====
+    const contactModal = document.getElementById('contactModal');
+    const contactBtn = document.getElementById('contact');
+
+    function openContact(){
+      contactModal.style.display = 'flex';
+      contactModal.setAttribute('aria-hidden','false');
+    }
+    function closeContact(){
+      contactModal.style.display = 'none';
+      contactModal.setAttribute('aria-hidden','true');
+    }
+    contactBtn.addEventListener('click', (e)=>{ e.preventDefault(); openContact(); });
+    // 点击遮罩关闭
+    contactModal.addEventListener('click', (e)=>{
+      if(e.target === contactModal){ closeContact(); }
+    });
+
+    // 键盘 ESC 关闭（可选增强）
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape'){
+        if(contactModal.style.display === 'flex') closeContact();
+        if(videoModal.style.display === 'flex') closeVideo();
+      }
+    });
+  </script>
+</body>
+</html>
