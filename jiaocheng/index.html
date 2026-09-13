@@ -6,6 +6,51 @@
   <meta name="description" content="GPT Plus升级教程">
   <title>会员购买与升级教程</title>
   <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .video-tutorial {
+      margin: 32px 0;
+    }
+
+    .video-tutorial-card {
+      overflow: hidden;
+      padding: 20px;
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    .video-tutorial-card h2 {
+      margin: 0 0 16px;
+      font-size: clamp(20px, 4vw, 28px);
+      line-height: 1.35;
+    }
+
+    .tutorial-video {
+      display: block;
+      width: 100%;
+      max-height: 75vh;
+      border-radius: 12px;
+      background: #000;
+    }
+
+    .video-fallback {
+      margin: 12px 0 0;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media (max-width: 640px) {
+      .video-tutorial {
+        margin: 20px 0;
+      }
+
+      .video-tutorial-card {
+        padding: 14px;
+        border-radius: 14px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="hero">
@@ -17,22 +62,28 @@
   </header>
 
   <main class="container">
-    <aside class="security-notice" aria-labelledby="service-title">
-  <div class="notice-icon" aria-hidden="true">☎</div>
-  <div>
-    <h2 id="service-title">如需帮助，联系客服</h2>
+    <section class="video-tutorial" aria-labelledby="video-title">
+      <div class="video-tutorial-card">
+        <h2 id="video-title">视频教程「手机，电脑都可以操作」</h2>
+        <video class="tutorial-video" controls playsinline preload="metadata">
+          <source src="./shipin.MOV" type="video/quicktime">
+          您的浏览器暂不支持在线播放视频，请
+          <a href="./shipin.MOV">点击这里打开视频</a>。
+        </video>
+        <p class="video-fallback">点击上方播放按钮即可观看，支持暂停、拖动进度和全屏播放。</p>
+      </div>
+    </section>
 
-    <div class="contact-copy-row">
-      <strong>微信QQ同号（已添加过的，无需重复添加）  ：552309781</strong>
-      <button
-        class="copy-button"
-        type="button"
-        data-copy="552309781">
-        点此复制号码
-      </button>
-    </div>
-  </div>
-</aside>
+    <aside class="security-notice" aria-labelledby="service-title">
+      <div class="notice-icon" aria-hidden="true">☎</div>
+      <div>
+        <h2 id="service-title">如需帮助，联系客服</h2>
+        <div class="contact-copy-row">
+          <strong>微信QQ同号（已添加过的，无需重复添加）  ：552309781</strong>
+          <button class="copy-button" type="button" data-copy="552309781">点此复制号码</button>
+        </div>
+      </div>
+    </aside>
 
     <section class="section" aria-labelledby="steps-title">
       <div class="section-heading">
@@ -46,9 +97,7 @@
           <div class="step-content">
             <h3>手机或者电脑，浏览器登录 ChatGPT</h3>
             <p>浏览器访问 <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">chatgpt.com</a>，登录后点击<a href="https://chatgpt.com/api/auth/session/" target="_blank" rel="noopener noreferrer">https://chatgpt.com/api/auth/session/</a>跳出一次性乱码</p>
-            <img class="tutorial-image"
-     src="./images/step-01.jpg"
-     alt="ChatGPT 官网登录页面">
+            <img class="tutorial-image" src="./images/step-01.jpg" alt="ChatGPT 官网登录页面">
           </div>
         </li>
 
@@ -57,9 +106,7 @@
           <div class="step-content">
             <h3>乱码发给客服，转账给客服或者前往网站购买激活码自助升级</h3>
             <p>打开 <a href="https://fe.dtyuedan.cn/shop/VA3AB5CB" target="_blank" rel="noopener noreferrer">chongzhi.chat购买激活码</a>，购买需要的商品，联系方式可以填账号，微信,QQ，手机，邮箱，仅作为查询卡密用</p>
-            <img class="tutorial-image"
-     src="./images/step-02.jpg"
-     alt="ChatGPT 官网登录页面">
+            <img class="tutorial-image" src="./images/step-02.jpg" alt="ChatGPT 官网登录页面">
           </div>
         </li>
 
@@ -68,9 +115,7 @@
           <div class="step-content">
             <h3>付款后得到激活码</h3>
             <p>付款后，发货信息有【激活链接】打开链接，输入乱码</p>
-            <img class="tutorial-image"
-     src="./images/step-03.jpg"
-     alt="ChatGPT 官网登录页面">
+            <img class="tutorial-image" src="./images/step-03.jpg" alt="ChatGPT 官网登录页面">
           </div>
         </li>
 
@@ -79,9 +124,7 @@
           <div class="step-content">
             <h3>打开激活链接，粘贴乱码，提交，即完成</h3>
             <p>不明白的地方，截图发给客服</p>
-            <img class="tutorial-image"
-     src="./images/step-04.jpg"
-     alt="激活网站">
+            <img class="tutorial-image" src="./images/step-04.jpg" alt="激活网站">
           </div>
         </li>
 
@@ -89,10 +132,8 @@
           <div class="step-number" aria-hidden="true">05</div>
           <div class="step-content">
             <h3>如果升级完成，还是免费版，按下图片操作【直接到账的，无需操作】</h3>
-            <pl</p>
-            <img class="tutorial-image"
-     src="./images/step-05.jpg"
-     alt="ChatGPT 官网登录页面">
+            <p></p>
+            <img class="tutorial-image" src="./images/step-05.jpg" alt="ChatGPT 官网登录页面">
           </div>
         </li>
       </ol>
@@ -127,87 +168,79 @@
         <p>咨询订单状态时，请提供订单号或者联系方式给客服</p>
       </div>
       <div class="contact-placeholder">
-  <strong>微信 / QQ：552309781</strong>
-
-  <button
-    class="copy-button copy-button-light"
-    type="button"
-    data-copy="552309781">
-    复制号码
-  </button>
-</div>
+        <strong>微信 / QQ：552309781</strong>
+        <button class="copy-button copy-button-light" type="button" data-copy="552309781">复制号码</button>
+      </div>
     </section>
   </main>
-<dialog class="image-dialog" id="image-dialog">
-  <button
-    class="dialog-close"
-    type="button"
-    aria-label="关闭图片">
-    ×
-  </button>
 
-  <img id="dialog-image" src="" alt="">
-</dialog>
+  <dialog class="image-dialog" id="image-dialog">
+    <button class="dialog-close" type="button" aria-label="关闭图片">×</button>
+    <img id="dialog-image" src="" alt="">
+  </dialog>
+
   <footer>
     <div class="container">
       <p>本页面为独立教程模板，并非 OpenAI 官方网站，也不代表 OpenAI。</p>
       <p>最后更新：2026 年 7 月 26 日</p>
     </div>
   </footer>
-<script>
-  // 复制客服号码
-  document.querySelectorAll("[data-copy]").forEach(function (button) {
-    button.addEventListener("click", async function () {
-      const text = button.dataset.copy;
-      const originalText = button.textContent;
 
-      try {
-        await navigator.clipboard.writeText(text);
-        button.textContent = "已复制";
-      } catch (error) {
-        window.prompt("请复制客服号码：", text);
+  <script>
+    // 复制客服号码
+    document.querySelectorAll("[data-copy]").forEach(function (button) {
+      button.addEventListener("click", async function () {
+        const text = button.dataset.copy;
+        const originalText = button.textContent;
+
+        try {
+          await navigator.clipboard.writeText(text);
+          button.textContent = "已复制";
+        } catch (error) {
+          window.prompt("请复制客服号码：", text);
+        }
+
+        window.setTimeout(function () {
+          button.textContent = originalText;
+        }, 1600);
+      });
+    });
+
+    // 点击教程图片放大
+    const imageDialog = document.getElementById("image-dialog");
+    const dialogImage = document.getElementById("dialog-image");
+    const closeButton = imageDialog.querySelector(".dialog-close");
+
+    document.querySelectorAll(".tutorial-image").forEach(function (image) {
+      image.setAttribute("tabindex", "0");
+      image.setAttribute("role", "button");
+      image.setAttribute("aria-label", "点击放大：" + image.alt);
+
+      function openImage() {
+        dialogImage.src = image.src;
+        dialogImage.alt = image.alt;
+        imageDialog.showModal();
       }
 
-      window.setTimeout(function () {
-        button.textContent = originalText;
-      }, 1600);
+      image.addEventListener("click", openImage);
+
+      image.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openImage();
+        }
+      });
     });
-  });
 
-  // 点击教程图片放大
-  const imageDialog = document.getElementById("image-dialog");
-  const dialogImage = document.getElementById("dialog-image");
-  const closeButton = imageDialog.querySelector(".dialog-close");
-
-  document.querySelectorAll(".tutorial-image").forEach(function (image) {
-    image.setAttribute("tabindex", "0");
-    image.setAttribute("role", "button");
-    image.setAttribute("aria-label", "点击放大：" + image.alt);
-
-    function openImage() {
-      dialogImage.src = image.src;
-      dialogImage.alt = image.alt;
-      imageDialog.showModal();
-    }
-
-    image.addEventListener("click", openImage);
-
-    image.addEventListener("keydown", function (event) {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        openImage();
-      }
-    });
-  });
-
-  closeButton.addEventListener("click", function () {
-    imageDialog.close();
-  });
-
-  imageDialog.addEventListener("click", function (event) {
-    if (event.target === imageDialog) {
+    closeButton.addEventListener("click", function () {
       imageDialog.close();
-    }
-  });
-</script></body>
+    });
+
+    imageDialog.addEventListener("click", function (event) {
+      if (event.target === imageDialog) {
+        imageDialog.close();
+      }
+    });
+  </script>
+</body>
 </html>
